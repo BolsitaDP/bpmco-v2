@@ -9,6 +9,7 @@ import Home from "./sections/Home";
 import AboutUs from "./sections/AboutUs";
 import Footer from "./components/Footer";
 import OurProducts from "./sections/OurProducts";
+import OurClients from "./sections/OurClients";
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -26,6 +27,7 @@ function App() {
         <Home />
         <AboutUs />
         <OurProducts />
+        <OurClients />
         <Footer />
       </div>
     </ThemeProvider>

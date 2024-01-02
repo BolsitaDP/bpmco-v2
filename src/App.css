@@ -52,10 +52,125 @@
   font-weight: bold;
 }
 
+/* ----------------- OUR PRODUCTS ------------------ */
+
+.productsSectionTitle {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.productsCardContainer {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.productsCard {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.productTitulo {
+  /* background-color: red; */
+  color: var(--blanco);
+  text-decoration: underline;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.productImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImage > img {
+  width: 250px;
+}
+
+.productModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--azulOscuro);
+}
+
+.productTituloModal {
+  font-size: 1.5rem;
+  text-align: center;
+  /* color: var(--azulOscuro); */
+  font-weight: bold;
+}
+.productImageModalContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azulOscuro);
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.productImageModal {
+  padding: 15px;
+}
+
+/* ----------- OUR CLIENTS ------------ */
+
+.clienstLateral {
+  width: 10%;
+  background-color: var(--azulClaro);
+  height: 80vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.clientsBackground1 {
+  border-radius: 0 10px 10px 0px;
+  left: 0;
+}
+
+.clientsBackground2 {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.clientsTitulo {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.clientsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.clienteImgContainer {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.clienteImgContainer > img {
+  width: 150px;
+}
+
 /* ---------------- FOOTER -------------- */
 
 .footer {
-  background-color: red;
   height: 40px;
   position: fixed;
   bottom: 15px;

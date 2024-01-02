@@ -16,15 +16,15 @@ const OurProducts = () => {
         height: "80vh",
         width: "100%",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         flexDirection: "column",
         alignItems: "center",
         // backgroundColor: theme.palette.secondary.main,
         borderRadius: "20px ",
         // gap: "25%",
       }}>
-      <div>{t("ourProductsTitle")}</div>
-      <div>
+      <div className="productsSectionTitle">{t("ourProductsTitle")}</div>
+      <div className="productsCardContainer">
         <AnimatePresence>
           {ourProducts.map((prod) => (
             <motion.div
@@ -32,8 +32,11 @@ const OurProducts = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.2 }}
               onClick={() => setSelectedProduct(prod)}
+              className="productsCard"
               style={{
                 cursor: "pointer",
                 marginBottom: 10,
@@ -42,9 +45,11 @@ const OurProducts = () => {
                 backgroundColor: theme.palette.primary.main,
                 display: "flex",
               }}>
-              <div>{prod.titulo}</div>
-              <img src={prod.imagen} alt="prod título" />
-              <div>{prod.descripcion}</div>
+              <div className="productTitulo">{prod.titulo}</div>
+              <div className="productImage">
+                <img src={prod.imagen} alt="prod título" />
+              </div>
+              {/* <div>{prod.descripcion}</div> */}
             </motion.div>
           ))}
         </AnimatePresence>
@@ -65,23 +70,33 @@ const OurProducts = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                zIndex: 9999,
               }}
               onClick={() => setSelectedProduct(null)}>
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
+                className="productModal"
                 style={{
                   background: "#fff",
                   padding: 20,
                   borderRadius: 10,
+                  width: "50%",
                 }}>
-                <div>{selectedProduct.titulo}</div>
-                <img
-                  src={selectedProduct.imagen}
-                  alt={selectedProduct.titulo}
-                />
-                <div>{selectedProduct.descripcion}</div>
+                <div className="productTituloModal">
+                  {selectedProduct.titulo}
+                </div>
+                <div className="productImageModalContainer">
+                  <img
+                    className="productImageModal"
+                    src={selectedProduct.imagen}
+                    alt={selectedProduct.titulo}
+                  />
+                </div>
+                <div className="productDescripcionModal">
+                  {selectedProduct.descripcion}
+                </div>
               </motion.div>
             </motion.div>
           )}

@@ -35,8 +35,6 @@ const AboutUs = () => {
         className="aboutusDraggableDiv"
         drag
         dragConstraints={constraintsRef}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
         style={{
           // backgroundColor: `${theme.palette.contrast.main}`,
           display: "flex",
@@ -49,8 +47,6 @@ const AboutUs = () => {
       </motion.div>
       <motion.img
         className="aboutusDraggableDiv"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
         id="imagenProcesos"
         drag
         style={{

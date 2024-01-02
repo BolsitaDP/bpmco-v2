@@ -14,6 +14,8 @@ i18n.use(initReactI18next).init({
         footerLeft: "Developed by BPMco",
         footerRight: "Working through processes is possible and easy",
         ourProductsTitle: "Our products",
+        ourClients: "Our clients",
+        ourClientsTitle: "Our clients",
       },
     },
     es: {
@@ -27,6 +29,8 @@ i18n.use(initReactI18next).init({
         footerRight: "Trabajar por procesos es posible y fácil",
         ourProducts: "Nuestros productos",
         ourProductsTitle: "Nuestros productos",
+        ourClients: "Nuestros clientes",
+        ourClientsTitle: "Nuestros clientes",
       },
     },
   },
