@@ -27,6 +27,7 @@ const Contact = () => {
               {contactoInfo.correo}
             </a>
             <span>{contactoInfo.direccion}</span>
+            <span>{contactoInfo.telefono}</span>
             <span>{contactoInfo.ciudad}</span>
           </div>
         </div>

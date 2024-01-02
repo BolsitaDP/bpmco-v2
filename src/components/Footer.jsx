@@ -29,9 +29,16 @@ const Footer = () => {
         backgroundColor: isAtBottom
           ? theme.palette.primary.main
           : `${theme.palette.primary.main}80`,
+        textAlign: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10%",
       }}>
       <div>{t("footerLeft")}</div>
-      <div style={{ display: isAtBottom ? "flex" : "none" }}>
+      <div
+        style={{
+          display: isAtBottom ? "flex" : "none",
+        }}>
         {t("footerRight")}
       </div>
     </Box>

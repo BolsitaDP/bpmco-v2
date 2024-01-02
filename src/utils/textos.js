@@ -93,4 +93,5 @@ export const contactoInfo = {
   correo: "contacto@bpmco.co",
   direccion: "Cl. 63 # 21 - 17",
   ciudad: "Manizales",
+  telefono: "+57 310 4874785",
 };

@@ -11,7 +11,7 @@
   background-position: center;
   background-repeat: repeat;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .banderaLang {
@@ -225,4 +225,19 @@ img#Indubatch {
   bottom: 0;
   border-radius: 0px;
   left: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    top: 0px !important;
+    right: 0 !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+  .navbarContainer {
+    /* display: none !important; */
+  }
+  .navbarLinks {
+    display: none !important;
+  }
 }

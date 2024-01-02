@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppBar, Box, Button, Tooltip } from "@mui/material";
+import { AppBar, Box, Button, Tooltip, useMediaQuery } from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
 
 import logoBPMcoBlanco from "../assets/4-isologo_sin_fondo_blanco.png";
@@ -19,6 +19,8 @@ const Navbar = ({ changeLanguage }) => {
 
   const theme = useTheme();
 
+  const down1200 = useMediaQuery(theme.breakpoints.down("lg"));
+
   const { t } = useTranslation();
 
   const changeLang = () => {
@@ -37,11 +39,16 @@ const Navbar = ({ changeLanguage }) => {
   window.addEventListener("scroll", scrollHandler);
 
   return (
-    <AppBar position="fixed" variant={navbarScrolled && "scrolled"}>
+    <AppBar
+      position="fixed"
+      variant={navbarScrolled && "scrolled"}
+      className="navbar">
       <Box
+        className="navbarContainer"
         sx={{
           // backgroundColor: "red",
-          width: "100%",
+          width: "95%",
+          transition: "0.3s ease all",
           maxWidth: "1200px",
           display: "flex",
           justifyContent: "space-between",
@@ -55,11 +62,18 @@ const Navbar = ({ changeLanguage }) => {
               height: "9vh",
               transition: "0.3s ease all",
               cursor: "pointer",
+              marginRight: "20px",
             }}
           />
         </ScrollLink>
-        <Box sx={{ display: "flex" }}>
-          <Box sx={{ display: "flex", gap: "10px" }}>
+        <Box sx={{ display: "flex" }} className="navbarLinks">
+          <Box
+            sx={{
+              display: "flex",
+              gap: "10px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
             {linksNavbar.map((link, index) => {
               return (
                 <ScrollLink
@@ -87,8 +101,8 @@ const Navbar = ({ changeLanguage }) => {
               />
             </Tooltip>
           </Box>
-          <Box></Box>
         </Box>
+        <Box>asdasd</Box>
       </Box>
     </AppBar>
   );
