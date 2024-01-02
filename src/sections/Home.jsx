@@ -15,8 +15,8 @@ const Home = () => {
       id="home"
       sx={{
         height: "90vh",
-        width: "100vw",
-        backgroundColor: theme.palette.primary.contrastText,
+        width: "100%",
+        // backgroundColor: theme.palette.primary.contrastText,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -27,6 +27,7 @@ const Home = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       />
+      <div className="backgroundHome"></div>
     </Box>
   );
 };

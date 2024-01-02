@@ -42,7 +42,11 @@ const Navbar = ({ toggleTheme }) => {
           <img
             src={navbarScrolled ? logoBPMcoBlanco : logoBPMcoNormal}
             alt="Logo BPMco blanco"
-            style={{ height: "9vh", transition: "0.3s ease all" }}
+            style={{
+              height: "9vh",
+              transition: "0.3s ease all",
+              cursor: "pointer",
+            }}
           />
         </ScrollLink>
         <Box sx={{ display: "flex" }}>
@@ -52,6 +56,8 @@ const Navbar = ({ toggleTheme }) => {
                 <ScrollLink
                   style={{
                     color: !navbarScrolled && theme.palette.primary.main,
+                    cursor: "pointer",
+                    textDecoration: "underline",
                   }}
                   key={index}
                   spy

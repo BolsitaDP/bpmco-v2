@@ -5,23 +5,32 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        // Aquí van tus traducciones para inglés
         hello: "Hello",
         aboutUs: "About us",
-        // Otros textos...
+        ourProducts: "Our products",
+        aboutusTitle: "About us",
+        aboutusText:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit ut quam eleifend tempus. Vestibulum pulvinar elit quis mattis vestibulum. Aenean auctor massa in suscipit fringilla. Sed sollicitudin elit sit amet hendrerit luctus. Fusce ultrices leo in tristique auctor. Ut convallis turpis augue, nec ullamcorper purus luctus vitae. Duis ultrices sem eget tellus pretium, in venenatis dui bibendum. Etiam ornare nunc ut augue dignissim, ac lacinia sapien pharetra.",
+        footerLeft: "Developed by BPMco",
+        footerRight: "Working through processes is possible and easy",
+        ourProductsTitle: "Our products",
       },
     },
     es: {
       translation: {
-        // Aquí van tus traducciones para español
         hello: "Hola",
         aboutUs: "Quienes somos",
-        // Otros textos...
+        aboutusTitle: "Quienes somos",
+        aboutusText:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit ut quam eleifend tempus. Vestibulum pulvinar elit quis mattis vestibulum. Aenean auctor massa in suscipit fringilla. Sed sollicitudin elit sit amet hendrerit luctus. Fusce ultrices leo in tristique auctor. Ut convallis turpis augue, nec ullamcorper purus luctus vitae. Duis ultrices sem eget tellus pretium, in venenatis dui bibendum. Etiam ornare nunc ut augue dignissim, ac lacinia sapien pharetra.",
+        footerLeft: "Desarrollado por BPMco",
+        footerRight: "Trabajar por procesos es posible y fácil",
+        ourProducts: "Nuestros productos",
+        ourProductsTitle: "Nuestros productos",
       },
     },
-    // Agrega más idiomas según sea necesario
   },
-  lng: "es", // Idioma predeterminado
+  lng: "es",
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

@@ -39,6 +39,7 @@ const lightTheme = createTheme({
           backgroundColor: "transparent",
           boxShadow: "none",
           transition: "0.3s ease all",
+          backdropFilter: "blur(10px)",
         },
       },
       variants: [
@@ -51,7 +52,6 @@ const lightTheme = createTheme({
             top: "3%",
             padding: "2%",
             borderRadius: "20px",
-            backdropFilter: "blur(10px)",
           },
         },
       ],

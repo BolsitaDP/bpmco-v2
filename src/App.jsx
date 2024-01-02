@@ -7,6 +7,8 @@ import lightTheme from "./mui-theme/lightTheme";
 import darkTheme from "./mui-theme/darkTheme";
 import Home from "./sections/Home";
 import AboutUs from "./sections/AboutUs";
+import Footer from "./components/Footer";
+import OurProducts from "./sections/OurProducts";
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -23,6 +25,8 @@ function App() {
         <Navbar toggleTheme={toggleTheme} />
         <Home />
         <AboutUs />
+        <OurProducts />
+        <Footer />
       </div>
     </ThemeProvider>
   );

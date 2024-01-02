@@ -1,3 +1,79 @@
 .linkNavbar {
   color: white;
 }
+
+.backgroundHome {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/tagsPattern.png");
+  background-size: 100px;
+  background-position: center;
+  background-repeat: repeat;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* -------------- ABOUT-US ------------  */
+
+.aboutusDragArea {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  display: "flex";
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutusDraggableDiv {
+  width: 40%;
+  max-width: 500px;
+  min-height: 250px;
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.aboutusTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blanco);
+  text-transform: uppercase;
+  margin: 5% 0;
+}
+
+.aboutusText {
+  line-height: 2rem;
+  text-align: justify;
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+/* ---------------- FOOTER -------------- */
+
+.footer {
+  background-color: red;
+  height: 40px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  width: 20%;
+  min-width: 200px;
+  transition: 0.3s ease all;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--blanco);
+}
+
+.footer.bottom {
+  width: 100%;
+  bottom: 0;
+  border-radius: 0px;
+  left: 0;
+}

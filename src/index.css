@@ -6,4 +6,27 @@
   font-family: "Comfortaa", sans-serif;
   --azulOscuro: #134c7e;
   --azulClaro: #2180bb;
+  --blanco: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--azulOscuro);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--azulClaro);
+  border-radius: 12px;
 }
