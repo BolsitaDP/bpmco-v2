@@ -45,9 +45,9 @@ const OurProducts = () => {
                 backgroundColor: theme.palette.primary.main,
                 display: "flex",
               }}>
-              <div className="productTitulo">{prod.titulo}</div>
+              {/* <div className="productTitulo">{prod.titulo}</div> */}
               <div className="productImage">
-                <img src={prod.imagen} alt="prod título" />
+                <img src={prod.imagen} alt="prod título" id={prod.titulo} />
               </div>
               {/* <div>{prod.descripcion}</div> */}
             </motion.div>
@@ -92,10 +92,11 @@ const OurProducts = () => {
                     className="productImageModal"
                     src={selectedProduct.imagen}
                     alt={selectedProduct.titulo}
+                    id={selectedProduct.titulo}
                   />
                 </div>
                 <div className="productDescripcionModal">
-                  {selectedProduct.descripcion}
+                  {t(selectedProduct.descripcion)}
                 </div>
               </motion.div>
             </motion.div>

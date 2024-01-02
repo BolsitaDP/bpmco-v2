@@ -1,4 +1,5 @@
 // Imágenes productos
+import logoIndubatch from "../assets/productos/logoIndubatch.png";
 import logoProcess from "../assets/productos/logoProcess.png";
 import logoMerco from "../assets/productos/logoMerco.png";
 
@@ -28,19 +29,27 @@ export const linksNavbar = [
     texto: "ourClients",
     link: "ourClients",
   },
+  {
+    nombre: "Contact us",
+    texto: "contact",
+    link: "contact",
+  },
 ];
 
 export const ourProducts = [
   {
+    titulo: "Indubatch",
+    descripcion: "descriptionIndubatch",
+    imagen: logoIndubatch,
+  },
+  {
     titulo: "Process",
-    descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta feugiat tellus eget porttitor. Fusce vitae dolor arcu. In et suscipit lacus, in dapibus mi. Donec odio urna, aliquam convallis ligula ut, eleifend posuere mi. Mauris dictum lectus nisl, et fermentum lacus maximus ut. Vivamus tempus, ipsum sed vulputate fermentum, enim est mollis magna, at ultrices dui ligula vitae tortor. Ut gravida eros eu suscipit blandit. Donec id congue lorem, et vulputate est. ",
+    descripcion: "descriptionProcess",
     imagen: logoProcess,
   },
   {
     titulo: "Merco",
-    descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta feugiat tellus eget porttitor. Fusce vitae dolor arcu. In et suscipit lacus, in dapibus mi. Donec odio urna, aliquam convallis ligula ut, eleifend posuere mi. Mauris dictum lectus nisl, et fermentum lacus maximus ut. Vivamus tempus, ipsum sed vulputate fermentum, enim est mollis magna, at ultrices dui ligula vitae tortor. Ut gravida eros eu suscipit blandit. Donec id congue lorem, et vulputate est. ",
+    descripcion: "descriptionMerco",
     imagen: logoMerco,
   },
 ];
@@ -79,3 +88,9 @@ export const ourClients = [
     imagen: logoNorgas,
   },
 ];
+
+export const contactoInfo = {
+  correo: "contacto@bpmco.co",
+  direccion: "Cl. 63 # 21 - 17",
+  ciudad: "Manizales",
+};

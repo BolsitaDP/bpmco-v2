@@ -14,6 +14,10 @@
   opacity: 0.4;
 }
 
+.banderaLang {
+  cursor: pointer;
+}
+
 /* -------------- ABOUT-US ------------  */
 
 .aboutusDragArea {
@@ -50,6 +54,7 @@
   text-align: justify;
   color: var(--blanco);
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 /* ----------------- OUR PRODUCTS ------------------ */
@@ -76,6 +81,9 @@
   flex-direction: column;
   border-radius: 10px;
   width: 350px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 .productTitulo {
@@ -95,6 +103,12 @@
 
 .productImage > img {
   width: 250px;
+}
+
+img#Indubatch {
+  filter: contrast(0);
+  width: 100%;
+  filter: brightness(100);
 }
 
 .productModal {
@@ -166,6 +180,26 @@
 
 .clienteImgContainer > img {
   width: 150px;
+}
+
+/* --------------- CONTACT US -------------- */
+
+.contactusTitle {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.contactoInfoInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactoLinkCorreo {
+  text-decoration: none;
+  color: var(--azulOscuro);
 }
 
 /* ---------------- FOOTER -------------- */

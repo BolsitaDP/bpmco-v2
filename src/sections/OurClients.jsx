@@ -23,13 +23,20 @@ const OurClients = () => {
           width: "80%",
           height: "80vh",
           position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
           left: "10%",
         }}>
         <div className="clientsTitulo">{t("ourClientsTitle")}</div>
         <div className="clientsContainer">
           {ourClients.map((client) => {
             return (
-              <Tooltip title={client.nombre} placement="bottom">
+              <Tooltip
+                title={client.nombre}
+                placement="bottom"
+                key={client.nombre}>
                 <div className="clienteImgContainer">
                   <img src={client.imagen} alt={client.nombre} />
                 </div>
