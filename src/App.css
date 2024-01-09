@@ -177,7 +177,7 @@ img#Indubatch {
 
 .clientsTitulo {
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--letraGrande);
   margin: 20px 0;
 }
 
@@ -201,7 +201,7 @@ img#Indubatch {
 /* --------------- CONTACT US -------------- */
 
 .contactusTitle {
-  font-size: 2rem;
+  font-size: var(--letraGrande);
   margin: 20px 0;
 }
 
@@ -211,6 +211,10 @@ img#Indubatch {
   line-height: 2rem;
   justify-content: center;
   align-items: center;
+}
+
+.contactoInfoInfo > span {
+  font-size: var(--letraMediana) !important;
 }
 
 .contactoLinkCorreo {
@@ -320,5 +324,46 @@ img#Indubatch {
 
   .productImageModalContainer > img {
     width: 250px;
+  }
+
+  #ourClients {
+    height: max-content !important;
+  }
+
+  /* .clientsSection {
+    height: max-content !important;
+  } */
+
+  /* .clienstLateral {
+    height: 100%;
+  } */
+
+  .clienteImgContainer,
+  .clienteImgContainer > img {
+    width: 100px;
+  }
+
+  #contact {
+    margin: 30px 0;
+  }
+
+  .footer {
+    font-size: var(--letraMediana);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .productModal {
+    width: 100vw !important;
+    height: max-content !important;
+  }
+
+  .listSideNavbar {
+    width: 100vw;
+    font-size: var(--letraGrande);
+    margin: 50px;
+    align-items: center;
+    height: 80%;
+    justify-content: center;
   }
 }

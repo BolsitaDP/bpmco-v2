@@ -19,6 +19,7 @@ const OurClients = () => {
       <div className="clientsBackground1 clienstLateral"></div>
       <div className="clientsBackground2 clienstLateral"></div>
       <Box
+        className="clientsSection"
         sx={{
           width: "80%",
           height: "80vh",

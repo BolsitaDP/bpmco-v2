@@ -142,6 +142,7 @@ const Navbar = ({ changeLanguage }) => {
                     cursor: "pointer",
                     textDecoration: "underline",
                   }}
+                  onClick={() => setDrawerOpen(false)}
                   key={index}
                   spy
                   smooth
