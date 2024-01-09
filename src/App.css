@@ -18,6 +18,22 @@
   cursor: pointer;
 }
 
+/* --------------- NAVBAR --------------- */
+
+.listSideNavbar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px !important;
+  gap: 20px;
+}
+
+.listSideNavbar > a {
+  font-size: var(--letraMediana);
+  color: var(--azulOscuro);
+}
+
 /* -------------- ABOUT-US ------------  */
 
 .aboutusDragArea {
@@ -42,7 +58,7 @@
 }
 
 .aboutusTitle {
-  font-size: 2rem;
+  font-size: var(--letraGrande);
   font-weight: bold;
   color: var(--blanco);
   text-transform: uppercase;
@@ -54,13 +70,13 @@
   text-align: justify;
   color: var(--blanco);
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: var(--letraPequeña);
 }
 
 /* ----------------- OUR PRODUCTS ------------------ */
 
 .productsSectionTitle {
-  font-size: 2rem;
+  font-size: var(--letraGrande);
   margin: 20px 0;
 }
 
@@ -90,7 +106,7 @@
   /* background-color: red; */
   color: var(--blanco);
   text-decoration: underline;
-  font-size: 1.3rem;
+  font-size: var(--letraGrande);
   text-align: center;
   margin: 0 0 10px 0;
 }
@@ -120,7 +136,7 @@ img#Indubatch {
 }
 
 .productTituloModal {
-  font-size: 1.5rem;
+  font-size: var(--letraGrande);
   text-align: center;
   /* color: var(--azulOscuro); */
   font-weight: bold;
@@ -234,10 +250,75 @@ img#Indubatch {
     width: 100% !important;
     border-radius: 0 !important;
   }
-  .navbarContainer {
-    /* display: none !important; */
-  }
   .navbarLinks {
     display: none !important;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    gap: 30%;
+    cursor: pointer;
+  }
+
+  .hamburger > div {
+    background-color: var(--azulOscuro);
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    transform-origin: right;
+  }
+
+  .hamburger.white > div {
+    background-color: var(--blanco) !important;
+  }
+
+  .open > div:first-child {
+    transform: rotate(-45deg);
+  }
+  .open > div:nth-child(2) {
+    opacity: 0;
+  }
+  .open > div:last-child {
+    transform: rotate(45deg);
+  }
+
+  #aboutUs {
+    height: max-content !important;
+  }
+
+  .aboutusDragArea {
+    height: 60%;
+  }
+
+  #imagenProcesos {
+    display: none !important;
+  }
+
+  .aboutusDraggableDiv {
+    width: 100%;
+    margin-bottom: 20px !important;
+  }
+
+  #ourProducts {
+    height: max-content !important;
+    margin: 30px 0;
+  }
+
+  .productsCard {
+    width: 250px;
+  }
+
+  .productImage > img {
+    width: 150px;
+  }
+
+  .productImageModalContainer > img {
+    width: 250px;
   }
 }

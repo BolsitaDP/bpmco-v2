@@ -7,6 +7,9 @@
   --azulOscuro: #134c7e;
   --azulClaro: #2180bb;
   --blanco: #fff;
+  --letraGrande: clamp(18px, 3vw, 36px);
+  --letraMediana: clamp(16px, 2vw, 24px);
+  --letraPequeña: clamp(14px, 1vw, 18px);
 }
 
 ::-webkit-scrollbar {

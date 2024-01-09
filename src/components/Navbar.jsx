@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { AppBar, Box, Button, Tooltip, useMediaQuery } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Tooltip,
+  useMediaQuery,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
 
 import logoBPMcoBlanco from "../assets/4-isologo_sin_fondo_blanco.png";
@@ -16,10 +26,17 @@ import { linksNavbar } from "../utils/textos";
 const Navbar = ({ changeLanguage }) => {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
   const [langEs, setLangEs] = useState("es");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setDrawerOpen(true);
+  };
+
+  const onClose = () => {
+    setDrawerOpen(false);
+  };
 
   const theme = useTheme();
-
-  const down1200 = useMediaQuery(theme.breakpoints.down("lg"));
 
   const { t } = useTranslation();
 
@@ -102,7 +119,40 @@ const Navbar = ({ changeLanguage }) => {
             </Tooltip>
           </Box>
         </Box>
-        <Box>asdasd</Box>
+        <div
+          className={`hamburger ${drawerOpen && "open"} ${
+            navbarScrolled && "white"
+          }`}
+          onClick={() => setDrawerOpen(!drawerOpen)}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <Drawer
+          anchor="right"
+          open={drawerOpen}
+          onClose={onClose}
+          className="drawer">
+          <List className="listSideNavbar">
+            {linksNavbar.map((link, index) => {
+              return (
+                <ScrollLink
+                  style={{
+                    color: !navbarScrolled && theme.palette.primary.main,
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                  }}
+                  key={index}
+                  spy
+                  smooth
+                  duration={500}
+                  to={link.link}>
+                  {t(link.texto)}
+                </ScrollLink>
+              );
+            })}
+          </List>
+        </Drawer>
       </Box>
     </AppBar>
   );
